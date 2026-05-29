@@ -56,9 +56,13 @@ app.get('/', (req, res) => {
   res.render('home')
 });
 
+// app.get('/campgrounds', catchAsync(async (req, res) => {
+//   const campgrounds = await Campground.find({})
+//   res.render('campgrounds/index', { campgrounds })
+// }))
 app.get('/campgrounds', catchAsync(async (req, res) => {
   const campgrounds = await Campground.find({})
-  res.render('campgrounds/index', { campgrounds })
+  res.send(campgrounds)
 }))
 
 
