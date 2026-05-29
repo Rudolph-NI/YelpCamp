@@ -7,7 +7,7 @@ const { campgroundSchema } = require('./schemas.js');
 
 const catchAsync = require('./utils/catchAsync');
 
-const ExpressError = require('./utils/expressError');
+const ExpressError = require('./utils/expressError.js');
 
 const methodOverride = require('method-override')
 const Campground = require('./models/campground');
